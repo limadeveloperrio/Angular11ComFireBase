@@ -1,0 +1,23 @@
+[debug] [2022-12-26T12:35:45.174Z] ----------------------------------------------------------------------
+[debug] [2022-12-26T12:35:45.175Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\limad\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2022-12-26T12:35:45.176Z] CLI Version:   11.19.0
+[debug] [2022-12-26T12:35:45.176Z] Platform:      win32
+[debug] [2022-12-26T12:35:45.176Z] Node Version:  v16.16.0
+[debug] [2022-12-26T12:35:45.177Z] Time:          Mon Dec 26 2022 12:35:45 GMT+0000 (Horário do Meridiano de Greenwich)
+[debug] [2022-12-26T12:35:45.177Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-12-26T12:35:45.249Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/undefined/serviceAccounts/undefined@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2022-12-26T12:35:45.250Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/undefined/serviceAccounts/undefined@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2022-12-26T12:35:46.042Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/undefined/serviceAccounts/undefined@appspot.gserviceaccount.com:testIamPermissions 404
+[debug] [2022-12-26T12:35:46.043Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/undefined/serviceAccounts/undefined@appspot.gserviceaccount.com:testIamPermissions {"error":{"code":404,"message":"Unknown service account","status":"NOT_FOUND"}}
+[debug] [2022-12-26T12:35:46.043Z] [functions] service account IAM check errored, deploy may fail:HTTP Error: 404, Unknown service account {"name":"FirebaseError","children":[],"context":{"body":{"error":{"code":404,"message":"Unknown service account","status":"NOT_FOUND"}},"response":{"statusCode":404}},"exit":1,"message":"HTTP Error: 404, Unknown service account","status":404}
+[debug] [2022-12-26T12:35:46.045Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/undefined [none]
+[debug] [2022-12-26T12:35:46.316Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/undefined 403
+[debug] [2022-12-26T12:35:46.316Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/undefined {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2022-12-26T12:35:46.317Z] HTTP Error: 403, The caller does not have permission
+[debug] [2022-12-26T12:35:46.432Z] FirebaseError: HTTP Error: 403, The caller does not have permission
+    at responseToError (C:\Users\limad\AppData\Roaming\npm\node_modules\firebase-tools\lib\responseToError.js:49:12)
+    at RetryOperation._fn (C:\Users\limad\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:288:77)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[error] 
+[error] Error: Failed to get Firebase project undefined. Please make sure the project exists and your account has permission to access it.

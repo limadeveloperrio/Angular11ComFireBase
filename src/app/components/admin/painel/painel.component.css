@@ -1,0 +1,9 @@
+.card {
+  margin: 0 auto; /* Added */
+  float: none; /* Added */
+  display: flex;
+  padding: 5%;
+  margin-top: 5%;
+}
+
+
